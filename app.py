@@ -33,3 +33,6 @@ def main():
 def random():
     users = User.query.all()
     return render_template('users.html', users=users)
+if '__name__' == '__main__':
+    db.create_all()
+    app.run()
