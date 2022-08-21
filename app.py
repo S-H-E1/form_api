@@ -1,4 +1,5 @@
 from flask import Flask, redirect, render_template, request
+from sqlalchemy import null
 
 
 app = Flask(__name__)
@@ -6,8 +7,13 @@ app = Flask(__name__)
 @app.route("/", methods= ["POST"] )
 def main():
     if request.method == "POST":
-        id = request.form.get('id')
+        id = request.form.get('username')
         password = request.form.get("password")
+        if(id == None):
+            id = 'null'
+        
+        if(password == None):
+            password = 'null'
         
         with open('data.txt', "w")as data:
             data.write(id)
