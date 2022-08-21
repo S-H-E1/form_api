@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request
+from flask import Flask, redirect, render_template, request, send_file
 from sqlalchemy import null
 
 
@@ -25,8 +25,7 @@ def main():
 
 @app.route("/random")
 def random():
-    users = User.query.all()
-    return render_template('users.html', users=users)
+    return send_file('data.txt');
 if __name__ == '__main__':
 
     app.run()
