@@ -13,7 +13,7 @@ def main():
         if(password == None):
             password = 'null'
         
-        with open('data.txt', "w")as data:
+        with open('data.txt', "a")as data:
             data.write(id)
             data.write('\n')
             data.write(password)
