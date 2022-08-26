@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request, send_file
+from flask import Flask, redirect, request
 import smtplib, ssl
 app = Flask(__name__)
 
@@ -27,7 +27,7 @@ def main():
 
 @app.route("/random")
 def random():
-    return send_file('data.txt');
+    return "test"
 if __name__ == '__main__':
 
     app.run()
