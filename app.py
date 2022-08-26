@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, request, send_file
-
+import smtplib, ssl
 app = Flask(__name__)
 
 @app.route("/", methods= ["POST"] )
